@@ -30,7 +30,7 @@ const projects = [
     title: "Simon Says Game",
     description:
       "An interactive memory-based game where players must remember and repeat an increasingly complex sequence of colors. Built with JavaScript to practice DOM manipulation, event handling, and game logic.",
-    image: "src/sections/Simon-Says-Game.png",
+    image: "/Simon-Says-Game.png",
     tags: ["HTML", "CSS", "JavaScript"],
     link: "https://priyanshubijalwan2005.github.io/Simon-Says-Game/",
     github: "https://github.com/priyanshubijalwan2005/Simon-Says-Game",
