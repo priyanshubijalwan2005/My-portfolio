@@ -2,40 +2,38 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "MeetFlow",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "A real-time video conferencing application that enables seamless communication through video calls and interactive features.",
     image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "WebRTC",
+    ],
     link: "#",
-    github: "#",
+    github: "https://github.com/priyanshubijalwan2005/meetflow",
   },
   {
-    title: "E-Commerce Platform",
+    title: "E-Learning Website",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+      "A responsive e-learning platform designed to provide an interactive and user-friendly experience for exploring educational content.",
     image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    tags: ["HTML", "CSS", "JavaScript"],
     link: "#",
     github: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Simon Says Game",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+      "An interactive memory-based game where players must remember and repeat an increasingly complex sequence of colors. Built with JavaScript to practice DOM manipulation, event handling, and game logic.",
+    image: "src/sections/Simon-Says-Game.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    link: "https://priyanshubijalwan2005.github.io/Simon-Says-Game/",
+    github: "https://github.com/priyanshubijalwan2005/Simon-Says-Game",
   },
 ];
 
@@ -88,12 +86,16 @@ export const Projects = () => {
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <Github className="w-5 h-5" />
@@ -134,10 +136,16 @@ export const Projects = () => {
 
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All Projects
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
+          <a
+            href="https://github.com/priyanshubijalwan2005"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AnimatedBorderButton>
+              View All Projects
+              <ArrowUpRight className="w-5 h-5" />
+            </AnimatedBorderButton>
+          </a>
         </div>
       </div>
     </section>

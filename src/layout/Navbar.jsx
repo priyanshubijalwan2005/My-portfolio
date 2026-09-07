@@ -6,7 +6,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
@@ -26,18 +26,26 @@ export const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
+        isScrolled
+          ? "bg-background/80 backdrop-blur-xl py-3 shadow-lg shadow-black/10"
+          : "bg-transparent py-5"
+      } z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
+        {/* Logo */}
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="group flex items-center justify-center w-11 h-11 rounded-full 
+  border border-primary/40 bg-primary/10 
+  text-base font-bold tracking-wide
+  transition-all duration-300
+  hover:bg-primary hover:text-primary-foreground
+  hover:scale-110 hover:shadow-lg hover:shadow-primary/30"
         >
-          PM<span className="text-primary">.</span>
+          PB
         </a>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
             {navLinks.map((link, index) => (
@@ -52,9 +60,11 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
+        {/* Desktop Contact Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <a href="#contact">
+            <Button size="sm">Contact Me</Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -81,9 +91,9 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button>Contact Me</Button>
+            </a>
           </div>
         </div>
       )}
