@@ -1,26 +1,24 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import meetflowImage from "@/assets/meetflow-image.jpg";
 
 const projects = [
   {
-    title: "MeetFlow",
-    description:
-      "A real-time video conferencing application that enables seamless communication through video calls and interactive features.",
-    image: "/projects/project1.png",
-    tags: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Socket.IO",
-      "WebRTC",
-    ],
-
-    // Your deployed MeetFlow project
-    link: "https://meet-flow-tawny.vercel.app/",
-
-    github: "https://github.com/priyanshubijalwan2005/meetflow",
-  },
+  title: "MeetFlow",
+  description:
+    "A real-time video conferencing application that enables seamless communication through video calls and interactive features.",
+  image: meetflowImage,
+  tags: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Socket.IO",
+    "WebRTC",
+  ],
+  link: "https://meet-flow-tawny.vercel.app/",
+  github: "https://github.com/priyanshubijalwan2005/meetflow",
+},
 
   {
     title: "E-Learning Website",
